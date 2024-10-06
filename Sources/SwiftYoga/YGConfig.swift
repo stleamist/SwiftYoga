@@ -40,9 +40,9 @@ extension YGConfig {
         }
     }
 
-    public var experimentalFeatures: YGExperimentalFeature {
+    public var experimentalFeatures: Set<YGExperimentalFeature> {
         get {
-            var features = YGExperimentalFeature()
+            var features: Set<YGExperimentalFeature> = []
 
             if YGConfigIsExperimentalFeatureEnabled(configRef, .webFlexBasis) {
                 features.insert(.webFlexBasis)

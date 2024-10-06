@@ -66,7 +66,7 @@ public class YGNode: Hashable {
     public init(config: YGConfig) {
         self.config = config
         nodeRef = YGNodeNewWithConfig(config.configRef)
-        YGNodeStyleSetFlexDirection(nodeRef, YGFlexDirectionColumn)
+        YGNodeStyleSetFlexDirection(nodeRef, .column)
         YGNodeSetContext(nodeRef, Unmanaged.passUnretained(self).toOpaque())
     }
 
